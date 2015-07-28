@@ -6,11 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<link rel="stylesheet" type="text/css" href="">
+	<script type="text/javascript" src="LSJSBridge.js"></script>
 </head>
 <body>
 	<div>
-		<button type="button">调用摄像头</button>
+		<button type="button" id="callCamera">调用摄像头</button>
 	</div>
+
+	<script type="text/javascript">
+	document.getElementById('callCamera').addEventListener('click', function(){
+		TCBridge.jsToNative('test', {
+			username: 'pangtong',
+		}, function() {
+			alert('sss');
+		})
+	}, false);
+	</script>
 </body>
 </html>
