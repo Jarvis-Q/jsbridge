@@ -155,8 +155,7 @@
         module.exports = {
             require: require,
             define: define,
-            jsToNative: exec.jsToNative,
-            nativeToJs: exec.nativeToJs
+            exec: exec
         };
     });
 
